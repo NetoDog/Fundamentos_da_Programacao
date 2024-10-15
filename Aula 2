@@ -50,4 +50,42 @@
     maior=(a+c+abs(a-c))/2;
     printf("maior_numero:%d",maior);*/
 
+ /*atividade 5*/
 
+    float preco,litros,altura,raio,pintatotal,custo,a_b,a_l,pi,area_total,area_pintada;
+    int latas;
+
+
+    preco=50;
+    litros=5;
+    pintatotal=15;//metros quadrados
+    custo=latas*50;
+    pi=3.1415;
+
+
+    printf("insira_altura:");
+    scanf("%f", &altura);
+
+    printf("insira_raio:");
+    scanf("%f", &raio);
+
+    a_b = pi *raio *raio;
+    printf("area_base:%.2f",a_b);
+
+    setbuf(stdin,NULL);
+
+    a_l = 2 *pi *altura*raio;
+    printf("\narea_lateral:%.2f",a_l);
+
+    setbuf(stdin,NULL);
+    area_total= a_l +2 *a_b;
+    printf("\narea total:%.2f",area_total);
+
+    area_pintada= area_total/15;
+    printf("\nnarea pintada:%.2f",area_pintada);
+
+    latas=(area_pintada/5)+1;
+    printf("\nquantidade de latas:%d",latas);
+
+    custo=latas*preco;
+    printf("\npreço:%.f",custo);
