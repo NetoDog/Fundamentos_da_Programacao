@@ -1,1 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+  int tempo;
+  float prestacao,taxa;
+    printf("insira o valor:");
+    scanf("%f",&prestacao);
+    printf("%.2f",prestacao);
+
+
+
+    printf("insira a taxa:");
+    scanf("%f",&taxa);
+
+    printf("%.2f",&prestacao);
+
+
+
+
+
+    return (0);
+    }
 
