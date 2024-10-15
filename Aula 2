@@ -1,0 +1,53 @@
+/*atividade 1
+    float nota1,nota2,media;
+    printf("insira_nota1:");
+    scanf("%f",&nota1);
+    setbuf(stdin,NULL);
+    printf("insira_nota:2:");
+    scanf("%f",&nota2);
+
+    media=(nota1+nota2)/2;
+    printf("sua_media %2.f",media);*/
+
+/*atividade 2
+
+    float raio,volume,pi;
+    pi=3.1415;
+
+    printf("insira_o_raio:");
+    scanf("%f",&raio);
+
+    volume=(4*pi*pow(raio,3))/3;
+    printf("volume:%4.f",volume);*/
+
+/*atividade 3
+    char nome[30];
+    float s_b,s_l,inss;
+
+    inss=0.795;
+
+    printf("insira_o_nome:");
+    gets(nome);
+    printf("\ninsira_salario_bruto:");
+    scanf("%f",&s_b);
+
+    s_l=(s_b*inss);
+    printf("salario_liquido:%.2f",s_l);*/
+
+    /*atividade 4
+
+    int a,b,c,maior;
+    printf("valor_a:");
+    scanf("%d",&a);
+
+    printf("valor_b:");
+    scanf("%d",&b);
+
+    printf("valor_c:");
+    scanf("%d",&c);
+
+    maior=(a+b+abs(a-b))/2;
+    maior=(a+c+abs(a-c))/2;
+    printf("maior_numero:%d",maior);*/
+
+
