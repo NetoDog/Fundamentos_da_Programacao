@@ -89,3 +89,60 @@
 
     custo=latas*preco;
     printf("\npreço:%.f",custo);
+
+ //Atividade 6
+   int reais,centavos,resto,rcentavos,nota_cem,nota_cinquenta,nota_vinte,nota_dez,nota_cinco,nota_dois,um_real,cinquenta_centavos,vintecinco_centavos,dez_centavos,cinco_centavos,um_centavo,moedas_cinquenta;
+
+    printf("insira um valor:");
+    scanf("%d,%d",&reais,&centavos);
+
+    nota_cem= reais/100;
+    resto=reais%100;
+    printf("notas de cem:%d",nota_cem);
+
+    nota_cinquenta= resto/50;
+    resto=resto%50;
+    printf("\nnotas de cinquenta:%d",nota_cinquenta);
+
+    nota_vinte= resto/20;
+    resto=resto%20;
+    printf("\nnotas de vinte:%d",nota_vinte);
+
+    nota_dez=resto/10;
+    resto=resto%10;
+    printf("/nnotas de dez:%d",nota_dez);
+
+    nota_cinco=resto/5;
+    resto=resto%5;
+    printf("\nnotas de cinco:%d",nota_cinco);
+
+    nota_dois=resto/2;
+    resto=resto%2;
+    printf("\nnotas  de dois:%d",nota_dois);
+
+    um_real= resto/1;
+    resto= centavos%1;
+    printf("\nmoedas de um:%d",um_real);
+
+    cinquenta_centavos=centavos/100;
+    resto= centavos%100;
+    cinquenta_centavos=resto/50;
+    resto= resto%50;
+
+    printf("\nmoedas de cinquenta:%d",cinquenta_centavos);
+
+    vintecinco_centavos=resto/25;
+    resto=resto%25;
+    printf("\nmoedas de vinte e cinco:%d",vintecinco_centavos);
+
+    dez_centavos=resto/10;
+    resto=resto%10;
+    printf("\nmoeddas de dez:%d",dez_centavos);
+
+    cinco_centavos=resto/5;
+    resto=resto%5;
+    printf("\nmoedas de cinco:%d",cinco_centavos);
+
+    um_centavo=resto/1;
+    resto=resto&1;
+    printf("\nmoedas de um centavo:%d",um_centavo);
