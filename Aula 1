@@ -1,0 +1,70 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+int main()
+{
+    //setlocale(LC_ALL,"Portuguese");
+
+    /*float valor;
+    char tipo;
+    int codigo;
+    char nome [30];
+    float valor1,valor2,media;*/
+
+
+    /*codigo = 123;
+    valor = 200.30;
+    tipo = 'a';
+
+    strcpy (nome,"utfpr");
+
+    codigo = 230;
+    valor1=5;
+    valor2=2;
+
+    media=(valor1+valor2)/5;
+
+    printf(" valor1 \n %.1f \n Valor2 \n %.1f", valor1, valor2);
+    printf("\n resultado \n %.1f", media);
+    system("\n pause");*/
+
+    /*int codigo;
+    float valor;
+    printf("informe codigo");
+    scanf("%d" ,&codigo);
+    printf("informe valor");
+    scanf("%f" , &valor);
+
+    printf("\n\nconteudo da variavel codigo %d",codigo);
+    printf("\nconteudo da variavel valor %f" ,valor);
+    printf("\n\ncodigo %d e valor %.2f" ,codigo,valor);*/
+    //setbuf(stdin,NULL); limpa o fluxo de dados anterior
+
+    /*int inicial,anterior,posterior;
+    printf("digite_um_numero:");
+    scanf("%d",&inicial);
+
+    posterior = inicial + 1;
+     = inicial - 1;
+
+    printf("\nanterior:%d \ninicial:%d \nposterior:%d ", anterior, inicial, posterior);*/
+
+    /*char descricao[30];
+    int codigo;
+    float preco;
+
+    printf("informe codigo:");
+    scanf("%d",&codigo);
+    setbuf(stdin,NULL);
+
+    printf("informe descricao:");
+    gets(descricao);
+    setbuf(stdin,NULL);
+
+    printf("informe preco:");
+    scanf("%f",&preco);
+    setbuf(stdin,NULL);
+
+
+    printf("codigo:%d \ndescricao%s \npreco:%.2f",codigo,descricao,preco);*/
