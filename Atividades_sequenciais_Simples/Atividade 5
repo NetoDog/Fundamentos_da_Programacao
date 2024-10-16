@@ -1,0 +1,16 @@
+//Atividade 5
+
+    int segundo,minutos,horas,tempo,resto;
+
+     printf("insira a quantidade de segundo:");
+     scanf("%d",&tempo);
+
+     horas= tempo / 3600;
+     resto= tempo % 3600;
+
+     minutos= resto / 60;
+     resto= resto % 60;
+
+     segundo= tempo%60;
+
+     printf("horas:%d minutos:%d segundo:%d", horas,minutos,segundo);
