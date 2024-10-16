@@ -7,7 +7,7 @@ int main()
 {
     setlocale(LC_ALL,"Portuguese");
 
-    //ATIVIDADE 1
+    //ATIVIDADE 2
     float comprimento,altura,largura,volume;
 
      printf("Insira o comprimento:");
