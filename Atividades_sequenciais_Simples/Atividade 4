@@ -1,0 +1,17 @@
+//atividade 4
+    int dias,meses,anos,resto;
+
+     printf("insira os dias:");
+     scanf("%d",&dias);
+
+
+    anos=dias/365;
+    resto=resto%365;
+
+    meses=resto/30;
+    meses=resto%30;
+
+
+    printf("\n\ndias:%d",resto);
+    printf("\nmeses:%d",meses);
+    printf("\nanos:%d",anos);
