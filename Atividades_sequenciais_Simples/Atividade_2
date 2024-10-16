@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+    //ATIVIDADE 1
+    float comprimento,altura,largura,volume;
+
+     printf("Insira o comprimento:");
+     scanf("%f",&comprimento);
+
+     printf("insira a largura:");
+     scanf("%f",&largura);
+
+     printf("insira a altura:");
+     scanf("%f",&altura);
+
+    volume=comprimento*largura*altura;
+    printf("volume:%.2f",volume);
+
+
+
+
+
+
+    return 0;
+}
