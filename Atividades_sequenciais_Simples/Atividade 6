@@ -1,0 +1,12 @@
+//Atividade 6
+
+   float distancia,consumo,media;
+
+    printf("insira a distancia:");
+    scanf("%f",&distancia);
+
+    printf("insira o consumo em litros:");
+    scanf("%f",&consumo);
+
+    media=distancia/consumo;
+    printf("distancia:%.2f consumo:%.2f media:%.2f",distancia,consumo,media);
