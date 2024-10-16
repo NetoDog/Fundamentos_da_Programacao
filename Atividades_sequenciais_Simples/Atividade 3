@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+    //ATIVIDADE 3
+
+    float real,dolar,resultado;
+
+     printf("insira o valor:");
+     scanf("%f",&real);
+
+    printf("insira a cotação do dolar:");
+    scanf("%f",&dolar);
+
+     resultado=real/dolar;
+
+     printf("\n\nquantidade de dolares na cotação atual:%.2f",resultado);
+
+
+
+
+
+
+
+    return 0;
+}
