@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+  /*if(........) 
+    comando;  (significa Se Ex: se a condição for válida executa o comando), utiliza-se {para mais de um comando};*/
+  /*if (<condição>)
+[comando1]; //condição verdade
+else
+[comando2]; //condição falsa;*/  
+
+  /*COMPARAÇÃO DE STRING
+Para comparar duas strings na linguagem C, devemos utilizar o método
+strcmp.
+Deverá ser utilizado a biblioteca string.h
+Como resultado teremosa
+= 0 --> significa que as duas strings são idênticas;
+> 0 --> significa que a primeira string é maior que a segunda.
+< 0 --> significa que a primeira string é menor que a segunda.*/
+  
+
+
+
+
+
+    return 0;
+}
