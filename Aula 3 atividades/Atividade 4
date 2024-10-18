@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+    /*4) Escreva um programa em C para ler três notas e o nome de um
+aluno, calcular e escrever sua média e o conceito aprovado ou
+reprovado(aprovado com média maior ou igual a 7)*/
+
+    float nota,nota2,nota3,media;
+    char nome[30];
+
+        printf("insira nome:");
+        gets(nome);
+
+
+        printf("informe nota 1:");
+        scanf("%f", &nota);
+
+        printf("informe nota 2:");
+        scanf("%f", &nota2);
+
+        printf("informe nota 3:");
+        scanf("%f", &nota3);
+
+        media=(nota+nota2+nota3)/3;
+
+        printf("%c possui media %.1f", nome,media);
+
+
+
+
+
+    return 0;
+}
