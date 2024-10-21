@@ -29,7 +29,15 @@ reprovado(aprovado com média maior ou igual a 7)*/
 
         media=(nota+nota2+nota3)/3;
 
-        printf("%c possui media %.1f", nome,media);
+        printf("%s possui media %.1f", nome,media);
+
+        if (media>=7)
+
+            printf("\nAprovado media:%.2f",media);
+
+        else
+
+             printf("\nReprovado media:%.2f",media);
 
 
 
