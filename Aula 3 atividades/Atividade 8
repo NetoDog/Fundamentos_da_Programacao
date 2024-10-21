@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    /*8) Escrever um programa para ler o código de um determinado produto
+e mostrar sua descrição, utilize a tabela abaixo;*/
+
+    int codigo;
+
+    printf("insira o codigo:");
+    scanf("%d",&codigo);
+
+    if (codigo==1)
+        printf("banana");
+    else
+        if (codigo==2)
+            printf("maca");
+        else
+            if (codigo==3)
+            printf("laranja");
+        else
+            if (codigo==4)
+                printf("abacate");
+        else
+            if (codigo==5)
+                printf("Melancia");
+        else
+            if (codigo==6)
+                printf("abacaxi");
+        else
+            printf("codigo invalido");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    return 0;
+}
