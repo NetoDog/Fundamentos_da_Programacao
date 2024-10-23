@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+
+    /*2) Escreva um algoritmo que, para uma conta bancária, leia o seu número,
+o saldo, o tipo de operação a ser realizada (depósito ou retirada) e o valor
+da operação. Após, determine e mostre o novo saldo. Se o novo saldo
+ficar negativo, deve ser mostrada, também, a mensagem “conta
+estourada”.*/
+
+    int numero;
+    float saldo, valor, saldo_atual;
+    char operacao[10];
+
+    printf("informe numero da conta:");
+    scanf("%d",&numero);
+
+    printf("informe saldo da conta:");
+    scanf("%f",&saldo);
+    setbuf(stdin,NULL);
+
+    printf("informe operacao:");
+    gets (operacao);
+    setbuf(stdin,NULL);
+
+    printf("informe valor da operacao:");
+    scanf("%f",&valor);
+
+    if (strcmp(operacao,"deposito")==0)
+        saldo_atual=saldo-valor;
+    else
+        saldo_atual=saldo+valor;
+    printf("\n\nNovo saldo: %.2f",saldo_atual);
+
+
+
+
+
+
+
+
+    return 0;
+}
