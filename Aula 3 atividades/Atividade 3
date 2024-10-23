@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+
+    /*3) Escrever um programa em C para ler três valores e escreve-los em
+ordem crescente.*/
+
+    int n1,n2,n3;
+
+    printf("insira 1numero:");
+    scanf("%d",&n1);
+
+    printf("insira 2numero:");
+    scanf("%d",&n2);
+
+    printf("insira 3numero:");
+    scanf("%d",&n3);
+
+    if (n1<n2)
+        if (n1<n3)
+            if(n2<n3)
+            printf("%d %d %d", n1,n2,n3);
+        else
+            printf("%d %d %d",n1,n3,n2);
+    else
+        printf("%d %d %d",n3,n1,n2);
+
+    else
+        if (n2<n3)
+            if (n1<n3)
+                printf("%d %d %d", n2,n1,n3);
+            else
+        printf("%d %d %d",n2,n3,n1);
+
+    else
+        printf("%d %d %d",n3,n2,n1);
+
+
+
+
+    return 0;
+}
