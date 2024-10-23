@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+    /*1) Faça um algoritmo que leia dois números A e B e imprima o maior deles.
+    Utilizando comando de decisão.*/
+
+
+    int valor1,valor2;
+
+    printf("insira valor1:");
+    scanf("%d",&valor1);
+
+    printf("insira valor2:");
+    scanf("%d",&valor2);
+
+    if (valor1>valor2)
+        printf("O maior valor e:%d",valor1);
+    else
+        printf("O maior valor é:%d",valor2);
+
+
+
+
+
+
+    return 0;
+}
