@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+    /*2) Escreva um programa em C que leia o código de um determinado produto e
+mostre a sua classificação, conforme tabela abaixo*/
+
+    int codigo;
+
+    printf("insira o codigo:");
+    scanf("%d",&codigo);
+
+    if (codigo==1)
+        printf("Alimento nao perecivel");
+    else
+     if (codigo==2||codigo==3||codigo==4)
+        printf("\nAlimento perecivel");
+    else
+     if (codigo==5||codigo==6)
+        printf("vestuario");
+    else
+     if (codigo==7)
+        printf("Higiene pessoal");
+    else
+     if (codigo>=8 && codigo<=15)
+        printf("Limpeza");
+    else
+     if (codigo>15)
+        printf("Codigo invalido");
+
+
+
+
+
+    return 0;
+}
