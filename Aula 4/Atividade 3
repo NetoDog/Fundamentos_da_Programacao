@@ -10,7 +10,7 @@ int main()
    /*3) Escrever um programa para ler um número inteiro e informar se ele é divisível
 por 3 e por 7.*/
 
-    int numero,resto;
+    int numero;
 
     printf("Insira um numero:");
     scanf("%d",&numero);
