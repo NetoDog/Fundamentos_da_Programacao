@@ -1,0 +1,5 @@
+// !=(negação não ), &&=(conjunção e ), ||=(disjunção ou )
+
+    /*O operador lógico E (&&) é utilizado quando dois ou mais
+relacionamentos lógicos de uma determinada condição
+necessitam ser verdadeiros.*/
