@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+    // !=(negação não ), &&=(conjunção e ), ||=(disjunção ou )
+
+    /*O operador lógico E (&&) é utilizado quando dois ou mais
+relacionamentos lógicos de uma determinada condição
+necessitam ser verdadeiros.*/
+
+    /*1) Escreva um programa em C que leia o ano de nascimento de uma pessoa,
+calcule e escreva a sua idade e, também, verifique se ela tem idade para
+votar(16 anos ou mais) e para conseguir a carteira de habilitação (18 anos ou
+mais).*/
+
+    int idade,anoatual,datan;
+
+    printf("insira ano atual:");
+    scanf("%d",&anoatual);
+
+    printf("insira data de nascimento:");
+    scanf("%d",&datan);
+
+    idade=anoatual-datan;
+
+    printf("idade:%d",idade);
+
+    if (idade>=16)
+        printf("\nApto a votar");
+    else
+        printf("\nInapto a votar");
+
+
+    if (idade>=18)
+        printf("\nApto a fazer CNH ");
+    else
+        printf("\nInapto a votar");
+
+
+
+
+
+    return 0;
+}
