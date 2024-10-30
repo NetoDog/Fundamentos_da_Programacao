@@ -1,0 +1,38 @@
+Seleção Múltipla Escolha
+• Usado quando deve-se fazer várias condições, e para cada condição
+executa-se uma ou mais ações específicas.
+• Pode-se usar uma série de if´s encadeados, porém, o código tende a
+ficar mais confuso / complexo.
+• Usado para comparações de igualdade com inteiros ou caracteres
+Break
+• Força a saída imediata de um laço / estrutura
+• Quando estiver em laços aninhados afetará somente o laço que o
+contém.
+Default
+Caso não aja nada compativel utiliza o comando após o default
+
+Operador Condicional Ternário ?
+• Forma compacta de expressar uma instrução if - else
+• Sintaxe:
+(condição) ? expr. V : expr. F;
+• Exemplo:
+ABS = (num < 0) ? - num : num;
+
+
+
+
+Sintaxe do comando switch() – Sintaxe intervalo de valores
+switch (expressão) {
+case constante 1 ... constante 2:
+instruções; /* opcional */
+break; /* opcional */
+case constante 3 … constante 4:
+instruções;
+break;
+case constante 5:
+instruções;
+break;
+[default:
+instruções;]
+}
+
