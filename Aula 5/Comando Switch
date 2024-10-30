@@ -18,6 +18,8 @@ Operador Condicional Ternário ?
 • Exemplo:
 ABS = (num < 0) ? - num : num;
 
+... = e
+
 
 
 
