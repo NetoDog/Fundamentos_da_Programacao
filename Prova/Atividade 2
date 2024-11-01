@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+   /*Questão 2 – Um supermercado está com uma promoção para seus clientes e definiu
+    uma tabela de descontos conforme abaixo.
+    Escreva um programa em linguagem C para ler o valor total de compra realizado por
+    um cliente calcular e escrever o valor que deverá ser pago após calcular o desconto
+    obtido.*/
+
+    float venda,desconto;
+
+    printf("Insira Valor da Compra:");
+    scanf("%f",&venda);
+
+
+    if (venda<=100){
+        desconto=venda*0.95;
+        printf("%.2f Recebera 5%% de desconto totalizando %.2f",venda,desconto);}
+
+        if (venda>=101 && (venda<=500)){
+         desconto=venda*0.93;
+            printf("%.2f Recebera 7%% de desconto totalizando %.2f",venda,desconto);}
+
+         if (venda>500){
+            desconto=venda*0.90;
+            printf("%.2f Recebera 10%% de desconto totalizando %.2f",venda,desconto);
+         }
+
+
+
+
+    return 0;
+}
