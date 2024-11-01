@@ -1,1 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+    /*Questão 1 - Escrever um programa em linguagem C para ler um número inteiro com 4
+dígitos, calcular e escrever se o segundo digito informado é par ou ímpar.*/
+
+    int numero,resto;
+
+    printf("insira um numero de 4 digitos:");
+    scanf("%d",&numero);
+
+    resto = numero%1000;
+    resto = numero/100;
+    resto = resto%2;
+
+    if (resto==0)
+        printf("Numero %d É par",numero);
+    else
+        printf("Numero %d É impar",numero);
+
+
+
+
+    return 0;
+}
 
