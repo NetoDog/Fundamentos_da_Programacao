@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+   /*Questão 3 –Escrever um programa em linguagem C que receba como dado de entrada
+    o salário de um funcionário. Calcule e escreva o valor do imposto de renda e seu salário
+    de acordo com a tabela abaixo.*/
+
+    float salario,desconto;
+
+    printf("Insira o Valor:");
+    scanf("%f",&salario);
+
+    if (salario <= 2112)
+        printf("%.2f Nao recebe desconto",salario);
+
+      if (salario <=2826.65)
+            desconto = (salario * 0.925) - 158.40;
+
+            if (salario <=3751.05)
+            desconto = (salario * 0.85) - 370.40;
+
+            if (salario <= 4664.68)
+                desconto = (salario * 0.775) - 651.73;
+            if (salario > 4664.68)
+                desconto = (salario * 0.725) - 884.96;
+    printf("Salario:%.2f Salario pos Leao:%.2f",salario,desconto);
+
+
+
+
+
+    return 0;
+}
