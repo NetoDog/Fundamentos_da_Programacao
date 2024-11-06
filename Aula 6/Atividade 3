@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+    /*3) Escreva um programa em C para ler um conjunto de 5 números calcular e escrever
+o maior e menor valor deste conjunto.*/
+
+    int cont=1,numero=0,maior,menor;
+
+    while (cont<=5){
+    printf("Insira numero:");
+    scanf("%d",&numero);
+    if (cont==1){
+            maior = numero;
+            menor = numero;}
+        if (numero>=maior)
+                maior=numero;
+        else
+            if (numero<=menor)
+                menor = numero;
+
+    cont++;
+    }
+    printf("Maior numero:%d \nMenor numero:%d",maior,menor);
+    return 0;
+}
