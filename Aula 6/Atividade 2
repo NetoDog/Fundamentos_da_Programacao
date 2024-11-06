@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+    /*2) Para uma turma de 5 alunos, construir um programa em C que tendo como dados
+    de entrada a altura e idade calcule e escreva.
+    a) a idade média dos alunos;
+    b) a altura média dos alunos.*/
+
+    int idade,cont,acIdade=0;
+    float altura,acAltura=0,mediaA,mediaI;
+
+
+    cont = 1;
+
+    while (cont<=5)
+    {
+        printf("Insira Idade:");
+        scanf("%d",&idade);
+        printf("Insira Altura:");
+        scanf("%f",&altura);
+        acIdade = acIdade + idade;
+        acAltura = acAltura + altura;
+        cont++;
+    }
+    printf("Media Idade:%.1f \nMedia Altura:%.2f",(float)acIdade/5,acAltura/5);
+
+    return 0;
+}
