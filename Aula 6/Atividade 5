@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+    /*5) Escreva um programa em C que determine o valor de S.
+𝑠 = 1
+1 − 2
+4 + 3
+9 − ⋯ − 10
+100*/
+    int cont=1;
+    float s;
+    char flag = '+';
+
+        while (cont <= 10){
+            if (flag == '+')
+            {
+                s = s + (float)cont / (cont*cont);
+                flag = '-';
+            }
+            else
+            {
+                s = s - (float)cont / (cont*cont);
+                flag = '+';
+            }
+            cont++;
+            }
+
+            printf("\n Valor:%f",s);
+            return 0;
+    }
