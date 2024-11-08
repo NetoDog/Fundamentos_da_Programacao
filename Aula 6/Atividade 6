@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+    /*6) Escrever um programa em C para ler um número calcular e escrever o seu fatorial.*/
+    int cont = 1, num, fat=1;
+    printf(" Insira o Numero:");
+    scanf("%d",&num);
+
+    while (cont<=num){
+        fat = fat * cont;
+        cont++;}
+        printf("%d",fat);
+            return 0;
+    }
