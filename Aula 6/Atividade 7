@@ -16,16 +16,20 @@ número.*/
     printf("insira a quantidade de numeros:");
     scanf("%d",&nvezes);
 
-    while (cont<=nvezes){
+    while (cont<=nvezes)
+    {
         printf("\nInsira o numero:");
         scanf("%d",&numero);
         i=1;
         fat=1;
-        while (i<=numero){
-        fat = fat * i;
-        i++;}
+        while (i<=numero)
+        {
+         fat = fat * i;
+         i++;
+        }
         printf("\nfat:%d",fat);
-        cont++;}
+        cont++;
+    }
 
 
 
