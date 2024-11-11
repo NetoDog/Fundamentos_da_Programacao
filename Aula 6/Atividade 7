@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+    /*7) Escreva um programa em C que leia um número n que indica quantos valores
+devem ser lidos a seguir. Para cada número lido, calcular e escrever o fatorial deste
+número.*/
+
+    int numero=0,cont=1,fat=1,nvezes,i=0;
+
+    printf("insira a quantidade de numeros:");
+    scanf("%d",&nvezes);
+
+    while (cont<=nvezes){
+        printf("\nInsira o numero:");
+        scanf("%d",&numero);
+        i=1;
+        fat=1;
+        while (i<=numero){
+        fat = fat * i;
+        i++;}
+        printf("\nfat:%d",fat);
+        cont++;}
+
+
+
+
+
+            return 0;
+    }
