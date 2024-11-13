@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+    /*2) Escreva um programa em C para ler as notas de 5 alunos (duas notas) calcular e
+escrever a media de cada aluno e o conceito aprovado ou reprovado (media 7) e a
+media dos alunos.*/
+
+    int cont=1;
+    float mediaaluno=0,mediaturma=0,nota,nota2;
+        for (cont>=0;cont<=5;cont++)
+            {
+             printf("\ninsira Nota 1:");
+             scanf("%f",&nota);
+             printf("insira nota 2:");
+             scanf("%f",&nota2);
+             mediaaluno = (nota+nota2)/2;
+             if (mediaaluno>=7)
+                printf("Media:%.2f aprovado",mediaaluno);
+             else
+                printf("Media:%.2f repovrado",mediaaluno);
+             mediaturma =  mediaturma + mediaaluno;
+            }
+            printf("\nMedia dos Alunos:%.2f",mediaturma/(cont-1));
+
+    return 0;
+    }
