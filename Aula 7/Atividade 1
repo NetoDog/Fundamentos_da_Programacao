@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+    /*1) escreva um programa em C para calcular e escrever a soma dos números
+compreendidos entre 85 e 907.*/
+
+    int cont=85,soma=0;
+
+    for(cont>=85;cont<=907;cont++)
+        {
+         soma = soma + cont;
+        }
+    printf ("soma:%d",soma);
+
+
+
+            return 0;
+    }
