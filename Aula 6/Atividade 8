@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+    /*8) Foi realizada uma pesquisa entre os habitantes de uma certa região. Foram
+coletados os dados de idade, sexo(M/F) e salário. Faça um programa em C que:
+a) Calcule a média de salário do grupo.
+b) Maior e menor idade do grupo;
+c) Quantidade de mulheres com salário até R$ 100,00.
+Final da entrada de dados será com a entrada de uma idade negativa.*/
+  int idade = 1, maior, menor, cont=0, cont_f=0;
+  float salario, soma=0, media;
+  char sexo;
+  while (idade > 0){
+    printf("informe idade:");
+    scanf("%d",&idade);
+    if (idade < 0)
+       break;
+    printf("informe salario:");
+    scanf("%f",&salario);
+    printf("Informe sexo (M/F):");
+    scanf(" %c",&sexo);
+    if (cont == 0)  {
+       maior = idade;
+       menor = idade;
+    }else
+       if (idade > maior)
+          maior = idade;
+       else
+          if (idade < menor)
+             menor = idade;
+    soma = soma + salario;
+    if (sexo == 'F' && salario < 100)
+       cont_f++;
+    cont ++;
+  }
+  media = soma / cont;
+  printf("\nMaior idade  %d menor idade %d",maior, menor);
+  printf("\nmedia de salario %.2f",media);
+  printf("\nNumero de mulheres com salario ate R$ 100,00 = %d",cont_f);
+
+            return 0;
+    }
