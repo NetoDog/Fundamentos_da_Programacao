@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+    /*4) Escreva um programa em C para ler um número qualquer calcular e escrever a
+soma dos números inteiros de 1 até o número.*/
+    int n,cont,soma=0;
+
+    printf("insira numero:");
+    scanf("%d",&n);
+
+    for (cont=0;cont<=n;cont++)
+    {
+     soma =  soma + cont;
+    }
+    printf("soma:%d",soma);
+    return 0;
+    }
