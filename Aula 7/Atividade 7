@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+    /*7) Escreva um programa em C para calcular a média dos números digitados pelo
+usuário, somente os números pares. (10 números)*/
+
+    int cont,numero,soma=0,mult=0;
+
+    for (cont=1;cont<=10;
+    cont++)
+    {
+        printf("Insira numero:");
+        scanf("%d",&numero);
+
+        if (numero%2 == 0 )
+        {
+            soma = soma + numero;
+            mult++;
+        }
+    }
+    if (mult>0)
+        printf("Media:%.2f",soma/(float)mult);
+    else
+        printf("Nenhum par numero digitado");
+    return 0;
+    }
