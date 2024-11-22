@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+ /*2) Escreva um algoritmo que encontre o quinto número maior que 1000, cuja
+divisão por 11 tenha resto 5*/
+
+    int cont,numero=1000,resto,quinto=0;
+
+    for (cont=1;cont!=0;cont++)
+    {
+        if (    numero%11 == 5)
+            {
+            quinto++;
+            }
+         if (quinto>=5)
+         {
+          printf("numero  %d resto  %d quinto %d",numero,numero%11,quinto);
+          break;
+         }
+         numero++;
+    }
+    return 0;
+    }
