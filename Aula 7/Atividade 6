@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+    /*6) Escreva um programa em C para ler um número qualquer, também solicitar um
+valor inicial e final para calcular e escrever a tabuada deste número.*/
+
+    int numero,cont,numerof=0,mult=0;
+
+        printf("Insira numero:");
+        scanf("%d",&numero);
+        printf("Insira valor Inicial:");
+        scanf("%d",&cont);
+        printf("Insira valor final:");
+        scanf("%d",&numerof);
+
+        for (cont!=0;cont<=numerof;cont++)
+        {
+            mult = numero * cont;
+            printf("\n%d x %d : %d",numero,cont,mult);
+        }
+    return 0;
+    }
