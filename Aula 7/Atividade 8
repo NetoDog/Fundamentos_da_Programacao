@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+ /*8) escreva um programa em C que verifique se um numero fornecido pelo usuário é
+primo ou não.*/
+
+    int numero,cont,flag=1;
+
+    printf("Insira Numero:");
+    scanf("%d",&numero);
+
+    for (cont=2;cont<numero;cont++)
+    {
+        if (numero % cont == 0)
+        flag = 0;
+    }
+    if (flag)
+        printf("Numero primo");
+    else
+        printf("Numero nao primo");
+    return 0;
+    }
