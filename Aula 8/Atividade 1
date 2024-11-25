@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+
+    /*1) Escreva um programa em C para calcular e escrever o fatorial de um número
+fornecido pelo usuário, somente aceitar que seja fornecido número par.*/
+
+    int num,fat,i;
+
+
+
+    do
+    {
+     printf("Insira numero:");
+     scanf("%d",&num);
+
+    }while (num%2 !=0);
+        fat = 1;
+        for (i=1;i<=num;i++)
+        {
+            fat = fat * i;
+        }
+    printf ("\nfat:%d",fat);
+
+
+    return 0;
+}
