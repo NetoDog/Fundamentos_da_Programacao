@@ -17,10 +17,10 @@ Ana.*/
 
     do
     {
-        ana = 1.50 + 0.2;
-        feliz = 1.10 + 0.3;
+        ana = ana + 0.02;
+        feliz = feliz + 0.03;
         anos++;
-    }while (feliz>ana);
+    }while (feliz<ana);
 
     printf("\nAltura de Ana = %.2f",ana);
     printf("\nAltura de Feliz = %.2f",feliz);
