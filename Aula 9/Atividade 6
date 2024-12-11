@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+   /*6) Escrever um programa em C para definir e ler um vetor A com 5 elementos construir um
+vetor B de mesma dimensão que deverá ser formado pelo fatorial do elemento correspondente do
+vetor A. Apresentar o vetor B.*/
+    int a[5],b[5],i,fat=1,n;
+
+    for (i=1;i<=5;i++)
+    {
+     printf("\nInforme Vetor A:");
+    scanf("%d",&a[i]);
+
+    for (n=1;n<=a[i];n++)
+        {
+         fat = fat * n;
+        }
+    printf ("\nFatorial :%d",fat);
+    b[i] = a[i];
+    fat = 1;
+    }
+
+    return 0;
+}
