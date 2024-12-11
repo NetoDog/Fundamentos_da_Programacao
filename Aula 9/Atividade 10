@@ -20,13 +20,12 @@ primeiro elemento do vetor A será o ultimo elemento do vetor B, escrever o veto
     }
     for (i=0;i<5;i++)
     {
-        b[i] = a[i];
+        b[i] = a[4-i];
     }
     for (i=0;i<5;i++)
     {
-        printf("\n  Posi:  %d  Vetor A:",a[i]);
-        printf("  Posi:  %d  Vetor B:",b[i]);
+        printf("\n  Posi:  %d  Vetor A:%d",i+1,a[i]);
+        printf("   Posi:  %d  Vetor B:%d",i+1,b[i]);
     }
     return 0;
-    tá errado;
 }
