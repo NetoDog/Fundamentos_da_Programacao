@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+   /*8) Escrever um programa em C para definir e ler tres vetores A, B e C com 5 elementos cada
+construir um vetor D com 15 elementos, que deverá ser formado pela junção dos elementos
+correspondentes do vetor A, B e C. Apresentar o vetor D.*/
+
+    int a[5],b[5],c[5],d[15],i,v=1;
+
+    for (i=1;i<=15;i++)
+    {
+
+        printf("\nInsira Vetor A:");
+        scanf("%d",&a[v]);
+
+        d[i] = a[v];
+
+        i++;
+        printf("\nInsira Vetor B:");
+        scanf("%d",&b[v]);
+
+        d[i] = b[v];
+
+        i++;
+
+        printf("\nInsira Vetor C:");
+        scanf("%d",&c[v]);
+
+        d[i] = c[v];
+
+        v++;
+
+    }
+     printf("Vetor D:");
+
+     for (i=1;i<=15;i++)
+     {
+        printf("  %d,",d[i]);
+     }
+
+    return 0;
+}
