@@ -1,0 +1,60 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+    /*1) Escrever um Programa e C para definir e ler três vetores com 5 elementos cada, sendo, nome, nota1 e
+    nota2; realizar uma pesquisa sequencial por nome se encontrado calcular e mostrar a média do aluno e
+    se esta aprovado ou reprovado, media 6,0.*/
+
+    int i,achou=0;
+    float nota1[5],nota2[5],media;
+    char nome[5][30],pesq[30];
+
+    printf("\nInforme Nome a ser pesquisado:");
+    gets(pesq);
+    setbuf(stdin,NULL);
+
+    for (i=0; i<5; i++)
+    {
+        printf("\nInsira Nome:");
+        gets(nome[i]);
+        setbuf(stdin,NULL);
+
+        printf("\nInsira Nota1:");
+        scanf("%f",&nota1[i]);
+        setbuf(stdin,NULL);
+
+        printf("\nInsira Nota2:");
+        scanf("%f",&nota2[i]);
+        setbuf(stdin,NULL);
+    }
+    i=0;
+
+    while (achou == 0 && i<5)
+    {
+        if (strcmp(pesq,nome[i])==0)
+       {
+            achou = 1;
+            media=(nota1[i]+nota2[i])/2;
+       }
+        else
+            i++;
+    }
+    if (achou)
+    {
+        printf("\nAluno %s Encontrado",nome[i]);
+        if (media >= 6)
+            printf("\nAprovado Media:%.2f",media);
+        else
+            printf("\nReprovado Media:%.2f",nota1[i]);
+    }
+    if (!achou)
+        printf("\nAluno %s Nao Encontrado",pesq);
+    return 0;
+}
