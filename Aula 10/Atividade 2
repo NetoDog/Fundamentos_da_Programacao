@@ -1,0 +1,52 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+    /*2) Escrever um programa em C para definir três vetores do tipo caráter com 5 elementos cada, nome,
+email, celular, realizar uma pesquisa sequencial por nome caso encontre mostrar nome, email e celular,
+caso não encontre mostrar a mensagem nome não encontrado, a pesquisa somente deverá ser
+encerrada quando for informado a palavra "fim" como elemento de pesquisa.*/
+
+    int i,achou=0;
+    char nome[5][30],numero[5][12],email[5][40],pesq[30];
+
+    
+    printf("\nInsira Elemento de Pesquisa:");
+    gets(pesq);
+    setbuf(stdin,NULL);
+
+    for (i=0;i<2;i++)
+    {
+        printf("\nInsira Nome:");
+        gets(nome[i]);
+        setbuf(stdin,NULL);
+
+        printf("\nInsira Telefone:");
+        gets(numero[i]);
+        setbuf(stdin,NULL);
+
+        printf("\nInsira Email:");
+        gets(email[i]);
+        setbuf(stdin,NULL);
+    }
+
+    i=0;
+
+    while(achou== 0)
+    {
+        if (strcmp(nome[i],pesq)==0)
+            achou = 1;
+        else
+            i++;
+    }
+    if (achou == 1)
+        printf("\n  Nome:%s |  Telefone:%s  | Email:%s  |",nome[i],numero[i],email[i]);
+    return 0;
+}
+Incompleto
