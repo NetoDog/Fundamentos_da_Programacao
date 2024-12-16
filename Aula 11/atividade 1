@@ -1,0 +1,60 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+    /*1) Escreva um Programa em C para definir e ler três vetores com 5 elementos cada, sendo nome do aluno, e
+suas duas notas, ordenar pelo vetor nome. escrever nome, média do aluno e a mensagem aprovado ou
+reprovado; media para aprovado 7,0*/
+
+    char nome[5][30],aux[30];
+    float nota1[5],nota2[5],auxf,auxf2;
+    int i;
+
+    for (i=0;i<5;i++)
+    {
+        printf("\nInsira Nome:");
+        gets(nome[i]);
+        setbuf(stdin,NULL);
+
+        printf("\nInsira Nota1:");
+        scanf("%f",&nota1[i]);
+        setbuf(stdin,NULL);
+
+        printf("\nInsira Nota2:");
+        scanf("%f",&nota2[i]);
+        setbuf(stdin,NULL);
+    }
+      for (i=0;i<4;i++)
+       {
+         for (int j=i+1;j<5;j++)
+          {
+            if (strcmp(nome[i],nome[j])==1)
+            {
+                strcpy(aux,nome[i]);
+                strcpy(nome[i],nome[j]);
+                strcpy(nome[j],aux);
+
+                auxf = nota1[i];
+                nota1[i]=nota1[j];
+                nota1[j]=auxf;
+
+                auxf2 = nota2[i];
+                nota2[i]=nota2[j];
+                nota2[i]=auxf2;
+
+            }
+          }
+       }
+    for(i=0;i<5;i++)
+     {
+     printf("\nAluno:%s Media:%.2f",nome[i],((nota1[i]+nota2[i])/2));
+     }
+ falta testar
+    return 0;
+}
