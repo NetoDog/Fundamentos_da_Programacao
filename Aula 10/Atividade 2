@@ -16,13 +16,18 @@ encerrada quando for informado a palavra "fim" como elemento de pesquisa.*/
     int i,achou=0;
     char nome[5][30],numero[5][12],email[5][40],pesq[30];
 
-    
-    printf("\nInsira Elemento de Pesquisa:");
+
+    do {
+    printf("\nInsira Elemento de Pesquisa (Insira:fim para encerrar o programa):");
     gets(pesq);
     setbuf(stdin,NULL);
 
+    if (strcmp(pesq,'fim')==0)
+        break;
+
     for (i=0;i<2;i++)
     {
+
         printf("\nInsira Nome:");
         gets(nome[i]);
         setbuf(stdin,NULL);
@@ -47,6 +52,9 @@ encerrada quando for informado a palavra "fim" como elemento de pesquisa.*/
     }
     if (achou == 1)
         printf("\n  Nome:%s |  Telefone:%s  | Email:%s  |",nome[i],numero[i],email[i]);
+    else
+        printf("Nao encontrado");
+    }while (i==i);
     return 0;
 }
-Incompleto
+//Funciona mas está mal organizado
