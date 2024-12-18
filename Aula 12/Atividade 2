@@ -1,0 +1,35 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+    /*2) Escreva um Programa em C para definir três vetores do tipo caracter com 5 elementos cada, nome,
+email, celular, realizar uma pesquisa binária por nome caso encontre mostrar nome, email e celular,
+caso não encontre mostrar a mensagem nome não encontrado, a pesquisa somente deverá ser
+encerrada quando for informado a palavra "fim" como elemento de pesquisa. Obs: para realizar a
+pesquisa binário vetor deverá esta ordenado.*/
+
+    char nome[5][30],cell[5][13],email[5][30],pesq[30];
+    int i,j,ini,meio,ult;
+
+    for (i=0;i<5;i++)
+    {
+        printf("Insira Nome:");
+        gets(nome[i]);
+        setbuf(stdin,NULL);
+
+        printf("Insira Numero de Celular:");
+        gets(cell[i]);
+        setbuf(stdin,NULL);
+
+        printf("Insira Email:");
+        gets(email[i]);
+        setbuf(stdin,NULL);
+    }
+    return 0;
+}
