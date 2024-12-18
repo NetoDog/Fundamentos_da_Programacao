@@ -1,0 +1,88 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+
+    /*1) Escreva um Programa em C para ler três vetores com 5 elementos cada com nome e as duas notas
+de um aluno, ordenar estes vetores tendo como base o vetor nome, realizar uma pesquisa binaria
+por nome se encontrar mostrar a média do aluno e seu conceito "Aprovado" ou "Reprovado",
+media >= 7 para ser aprovado, caso não encontre mostrar a mensagem "Aluno não encontrado" .*/
+
+    int i,k,achou,meio,ini,ult;
+    float nota1[5],nota2[5],media,auxf1,auxf2;
+    char nome[5][30],pesq[30],aux[30];
+
+    for (i=0;i<5;i++)
+    {
+        printf("Insira Nome:");
+        gets(nome[i]);
+        setbuf(stdin,NULL);
+
+        printf("Insira Nota 1:");
+        scanf("%f",&nota1[i]);
+        setbuf(stdin,NULL);
+
+        printf("Insira Nota 2:");
+        scanf("%f",&nota2[i]);
+        setbuf(stdin,NULL);
+    }
+     for (i=0;i<4;i++)
+     {
+
+         for(k=i+1;k<5;k++)
+         {
+             if (strcmp(nome[i],nome[k])==1)
+             {
+                strcpy(aux,nome[i]);
+                strcpy(nome[i],nome[k]);
+                strcpy(nome[k],aux);
+
+                auxf1 = nota1[i];
+                nota1[i] = nota1[k];
+                nota1[k]=auxf1;
+
+                auxf2  =  nota2[i];
+                nota2[i]  =  nota2[k];
+                nota2[k] = auxf2;
+             }
+         }
+     }
+
+     printf("Insira Nome a ser pesquisado:");
+     gets(pesq);
+     setbuf(stdin,NULL);
+
+      ini=0;
+      ult=4;
+     achou = 0;
+
+     while (ini<=ult && achou == 0)
+      {
+         meio = (ini+ult)/2;
+         if (strcmp(pesq,nome[meio])==0)
+            {
+            achou = 1;
+           media = (nota1[meio]+nota2[meio])/2;
+            }
+         else
+            if(strcmp(pesq,nome[meio])==1)
+                ini = meio + 1;
+           else
+                ult = meio - 1;
+      }
+      if (achou == 1)
+    {
+      if (media>=7)
+        printf("Aluno:%s Media:%.2f Aprovado",nome[meio],media);
+      else
+        printf("Aluno:%s Media:%.2f Reprovado",nome[meio],media);
+    }
+     if (achou == 0)
+        printf("Elemento pesquisado:%s Nao encontrado",pesq);
+    return 0;
+}
