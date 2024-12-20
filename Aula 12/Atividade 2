@@ -14,14 +14,20 @@ caso não encontre mostrar a mensagem nome não encontrado, a pesquisa somente d
 encerrada quando for informado a palavra "fim" como elemento de pesquisa. Obs: para realizar a
 pesquisa binário vetor deverá esta ordenado.*/
 
-    char nome[5][30],cell[5][13],email[5][30],pesq[30];
-    int i,j,ini,meio,ult;
+    /*3)Escrever um algoritmo para definir tres vetores do tipo caracter com 500 elementos cada, nome, email, celular, realizar uma pesquisa sequencial por nome caso 
+encontre mostrar nome, email e celular, caso n�o encontre mostrar a mensagem nome n�o encontrado, a pesquisa somente dever� ser encerrada quando for informado a palavra "fim" como elemento de pesquisa.*/
 
-    for (i=0;i<5;i++)
+    char nome[500][30],cell[500][16],email[500][50],pesq[30],aux[100];
+    int i,j,ini,meio,ult,achou;
+
+    for (i=0;i<500;i++)
     {
-        printf("Insira Nome:");
+        printf("Insira (fim para ir para proxima etapa) Nome:");
         gets(nome[i]);
         setbuf(stdin,NULL);
+
+        if (strcmp(nome[i],"fim")==0)
+            break;
 
         printf("Insira Numero de Celular:");
         gets(cell[i]);
@@ -30,6 +36,59 @@ pesquisa binário vetor deverá esta ordenado.*/
         printf("Insira Email:");
         gets(email[i]);
         setbuf(stdin,NULL);
+    }
+
+    for (i=0;i<499;i++)
+    {
+        for (j=i+1;j<500;j++)
+        {
+            if (strcmp(nome[i],nome[j])==1)
+            {
+            strcpy(aux,nome[i]);
+            strcpy(nome[i],nome[j]);
+            strcpy(nome[j],aux);
+
+            strcpy(aux,cell[i]);
+            strcpy(cell[i],cell[j]);
+            strcpy(cell[j],aux);
+
+            strcpy(aux,email[i]);
+            strcpy(email[j],email[i]);
+            strcpy(email[j],aux);
+            }
+        }
+    }
+    system("cls");
+    while(1)
+    {
+     setbuf(stdin,NULL);
+     printf("\n\nInforme Elemento a ser pesquisado:");
+     gets(pesq);
+     setbuf(stdin,NULL);
+
+     if (strcmp(pesq,"fim")==0)
+        break;
+
+     ini = 0;
+     ult = 499;
+     achou = 0;
+
+     while (ini<=ult && achou == 0)
+     {
+        meio = (ini+ult)/2;
+        if (strcmp(pesq,nome[meio])==0)
+            achou = 1;
+        if (strcmp(pesq,nome[meio])==1)
+            ini = meio + 1;
+         else
+            ult = meio - 1;
+
+     }
+        if (achou == 1)
+            printf("\nElemento:%s Email:%s Celular:%s",pesq,email[meio],cell[meio]);
+        if (achou == 0)
+            printf("\nElemento:%s Nao encontrado.",pesq);
+
     }
     return 0;
 }
