@@ -1,0 +1,42 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+    /*2) Escrever um programa em C para definir e ler dois vetores A e B cada um com 7 elementos.
+Construir uma matriz C de duas dimensões(2,7), em que a primeira linha será formada pelos
+elementos do vetor A e a segunda linha deverá ser formada pelos elementos do vetor B,
+escrever a matriz C.*/
+
+     int A[7],B[7],C[2][7],i,j;
+
+     for (j=0;j<7;j++)
+     {
+         printf("A:");
+         scanf("%d",&A[j]);
+     }
+     for (j=0;j<7;j++)
+     {
+         printf("B:");
+         scanf("%d",&B[j]);
+     }
+         for (j=0;j<7;j++)
+         {
+             C[0][j]=A[j];
+             C[1][j]=B[j];
+         }
+
+     for (i=0;i<2;i++)
+     {
+         printf("\n");
+         for (j=0;j<7;j++)
+         {
+             printf("C [%d][%d]: %d",i,j,C[i][j]);
+         }
+     }
+    return 0;
+}
