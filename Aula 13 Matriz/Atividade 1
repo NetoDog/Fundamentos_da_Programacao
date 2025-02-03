@@ -17,7 +17,7 @@ matriz B, escrever a matriz C.*/
     {
         for (j=0;j<3;j++)
         {
-            printf("A");
+            printf("A:");
             scanf("%d",&A[i][j]);
         }
     }
@@ -25,7 +25,7 @@ matriz B, escrever a matriz C.*/
     {
         for (j=0;j<3;j++)
         {
-            printf("B");
+            printf("B:");
             scanf("%d",&B[i][j]);
         }
     }
