@@ -1,0 +1,46 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+    /* 2) O mesmo exercício 1, mas o programa deverá suportar até 5 clientes. Ao final do cadastro de cada cliente
+    deverá ser perguntado: "Novo Cliente (S/N)?". Deve-se utilizar um vetor do tipo declarado como um registro
+    para a solução deste algoritmo.*/
+
+    int i;
+    char nclient;
+    struct
+    {
+        char nome[30],telefone[11],endereco[30];
+    } cliente[5];
+
+    i = -1;
+    while (1)
+    {
+
+        printf("Novo cliente: S/N :");
+        scanf("%c",&nclient);
+        setbuf(stdin,NULL);
+
+        if(nclient=='N')
+            break;
+
+        i++;
+        printf("Nome:");
+        gets(cliente[i].nome);
+        setbuf(stdin,NULL);
+        printf("Endereco:");
+        gets(cliente[i].endereco);
+        setbuf(stdin,NULL);
+        printf("Telefone:");
+        gets(cliente[i].telefone);
+        setbuf(stdin,NULL);
+
+    }
+
+    return 0;
+}
