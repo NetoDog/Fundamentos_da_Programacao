@@ -1,1 +1,30 @@
 
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+    /*1) Escreva um programa em C para cadastrar um cliente de uma loja. As informações necessárias são: nome,
+endereço e telefone. Deve ser usada uma estrutura de registro para a construção deste cadastro.*/
+
+    struct {
+        char nome[30],endereco[30],telefone[30];
+    }cliente;
+
+    printf("Insira dados do Cliente:");
+
+    gets(cliente.nome);
+    setbuf(stdin,NULL);
+    gets(cliente.endereco);
+    setbuf(stdin,NULL);
+    gets(cliente.telefone);
+    setbuf(stdin,NULL);
+
+    printf("Nome: %s Endereco: %s Telefone:%s",cliente.nome,cliente.endereco,cliente.telefone);
+
+    return 0;
+}
