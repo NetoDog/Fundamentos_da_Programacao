@@ -1,0 +1,40 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+    /*3) Ordenar o vetor por nome e escrever o vetor ordenado.*/
+    int i,j;
+
+    struct {
+    char nome[30];
+    } pessoas[5], aux;
+
+    for (i=0;i<5;i++){
+    printf("Insira nome:");
+    gets(pessoas[i].nome);
+    setbuf(stdin,NULL);
+    }
+    for (i=0;i<5;i++)
+    {
+        for(j=i+1;j<5;j++)
+        {
+            if (strcmp(pessoas[i].nome,pessoas[j].nome)==1)
+            {
+                aux=pessoas[i];
+                pessoas[i]=pessoas[j];
+                pessoas[j]=aux;
+
+            }
+        }
+    }
+    for (i=0;i<5;i++)
+    {
+        printf("\nNome:%s",pessoas[i].nome);
+    }
+    return 0;
+}
