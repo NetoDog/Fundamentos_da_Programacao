@@ -11,8 +11,8 @@ int main()
 pergunta para novo cliente ou quando preencher o vetor com 5 clientes, deverá permitir a consulta aos clientes
 por nome. Deverá ser digitado “Fim” para encerrar a consulta.*/
 
-    int i,j;
-    char nclient;
+    int i,j,ini,meio,fim,achou;
+    char pesq[30];
     struct
     {
         char nome[30],telefone[11],endereco[30];
@@ -22,15 +22,13 @@ por nome. Deverá ser digitado “Fim” para encerrar a consulta.*/
     while (1)
     {
 
-        printf("Novo cliente: S/N :");
-        scanf("%c",&nclient);
-        setbuf(stdin,NULL);
-
-        if(nclient=='N')
-            break;
-
         i++;
-        printf("Pos:%d Nome:",i);
+        printf("Informe fim para encerrar:");
+        gets(pesq);
+        setbuf(stdin,NULL);
+        if (strcmp(pesq,"fim")==0)
+            break;
+        printf("\nPos:%d Nome:",i);
         gets(cliente[i].nome);
         setbuf(stdin,NULL);
         printf("Pos:%d Endereco:",i);
@@ -40,7 +38,7 @@ por nome. Deverá ser digitado “Fim” para encerrar a consulta.*/
         gets(cliente[i].telefone);
         setbuf(stdin,NULL);
 
-        if (i==5)
+        if (i==4)
             break;
     }
     for (i=0;i<5;i++)
@@ -55,9 +53,33 @@ por nome. Deverá ser digitado “Fim” para encerrar a consulta.*/
             }
         }
     }
+    do
+    {
+        if (strcmp(pesq,"fim")==0)
+            break;
+        achou = 0;
+        ini=0;
+        fim=4;
+        meio=(ini+fim)/2;
+
+        while(ini<fim)
+        {
+            if(strcmp(pesq,cliente[meio].nome)==0)
+                achou = 1;
+
+            if (pesq>cliente[meio].nome)
+             meio=meio+1;
+           else
+            fim= meio-1;
+        }
+        if (achou == 1)
+            printf("Nome: %s Encontrado",cliente[meio].nome);
+    }while(1);
+
     for (i=0;i<5;i++)
     {
         printf("\nNome:%s Endereco:%s Telefono:%s",cliente[i].nome,cliente[i].endereco,cliente[i].telefone);
     }
+
     return 0;
 }
