@@ -1,0 +1,63 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+    /*4) O mesmo exercício 2, mas após o término de todos os cadastros, ou seja, quando o usuário digitar "N" na
+pergunta para novo cliente ou quando preencher o vetor com 5 clientes, deverá permitir a consulta aos clientes
+por nome. Deverá ser digitado “Fim” para encerrar a consulta.*/
+
+    int i,j;
+    char nclient;
+    struct
+    {
+        char nome[30],telefone[11],endereco[30];
+    } cliente[5],aux;
+
+    i = -1;
+    while (1)
+    {
+
+        printf("Novo cliente: S/N :");
+        scanf("%c",&nclient);
+        setbuf(stdin,NULL);
+
+        if(nclient=='N')
+            break;
+
+        i++;
+        printf("Pos:%d Nome:",i);
+        gets(cliente[i].nome);
+        setbuf(stdin,NULL);
+        printf("Pos:%d Endereco:",i);
+        gets(cliente[i].endereco);
+        setbuf(stdin,NULL);
+        printf("Pos:%d Telefone:",i);
+        gets(cliente[i].telefone);
+        setbuf(stdin,NULL);
+
+        if (i==5)
+            break;
+    }
+    for (i=0;i<5;i++)
+    {
+        for(j=i+1;j<5;j++)
+        {
+            if (strcmp(cliente[i].nome,cliente[j].nome)==1)
+            {
+                aux = cliente[i];
+                cliente[i]=cliente[j];
+                cliente[j]=aux;
+            }
+        }
+    }
+    for (i=0;i<5;i++)
+    {
+        printf("\nNome:%s Endereco:%s Telefono:%s",cliente[i].nome,cliente[i].endereco,cliente[i].telefone);
+    }
+    return 0;
+}
