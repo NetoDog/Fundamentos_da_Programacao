@@ -71,6 +71,7 @@ declaração das variáveis e antes do corpo do programa principal.*/
     }
     void proc_div()
     {
+        float r;
         printf("Insira A e B:\n");
         scanf("%d",&a);
         scanf("%d",&b);
