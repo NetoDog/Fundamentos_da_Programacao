@@ -1,0 +1,79 @@
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+
+int a,b,r,op;
+int main()
+{
+    setlocale(LC_ALL,"Portuguese");
+    /*Desenvolver um programa em C para efetuar as quatro operações
+básicas da matemática (+,-,*,/), através de um menu de opções que
+deverá dar ao usuário a possibilidade de escolher uma das operações.
+Como pode ser verificado este programa pode ser dividido em cinco
+rotinas, sendo uma principal e outras quatro secundárias. A Rotina
+principal efetuará o controle das outras quatro rotinas, que por sua vez,
+pedirão os valores, efetuar o calculo e apresentar os resultados.
+Para se criar subprogramas, é preciso descrevê-los após a
+declaração das variáveis e antes do corpo do programa principal.*/
+
+    do
+    {
+    printf("\nSelecione operação:"
+            "\n1:Adicao:"
+            "\n2:Subtracao:"
+            "\n3:Multiplicacao:"
+            "\n4:Divisao:"
+            "\n5:Sair:\n");
+            scanf("%d",&op);
+        switch (op){
+         case 1 : proc_adicao();
+                break;
+         case 2 : proc_sub();
+                break;
+         case 3 : proc_mult();
+                break;
+         case 4 : proc_div();
+                break;
+
+        }
+    }while (op !=5 );
+    return 0;
+}
+
+    void proc_adicao()
+    {
+        printf("Insira A e B:\n");
+        scanf("%d",&a);
+        scanf("%d",&b);
+
+        r = a + b;
+        printf(" %d + %d = %d",a,b,r);
+    }
+    void proc_sub()
+    {
+     printf("Insira A e B:\n");
+        scanf("%d",&a);
+        scanf("%d",&b);
+     r = a - b;
+     printf(" %d - %d = %d",a,b,r);
+    }
+    void proc_mult()
+    {
+        printf("Insira A e B:\n");
+        scanf("%d",&a);
+        scanf("%d",&b);
+        r = a * b;
+        printf(" %d x %d = %d",a,b,r);
+    }
+    void proc_div()
+    {
+        printf("Insira A e B:\n");
+        scanf("%d",&a);
+        scanf("%d",&b);
+        r = a / b;
+        printf(" %d / %d = %d",a,b,r);
+    }
