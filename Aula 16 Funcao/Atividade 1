@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    /*1)
+Escreva uma função que receba como parâmetro um
+número inteiro e retorne -1
+ou 1 se este número for negativo, positivo, respectivamente,
+escrever o resultado.*/
+    int num,rest;
+    printf("Informe Numero:");
+    scanf("%d",&num);
+    rest= fun_ret(num);
+    printf("numero: %d",rest);
+    return 0;
+}
+    int fun_ret (int pnum)
+    {
+        if (pnum>0)
+            return 1;
+        else
+            return -1;
+    }
