@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    /*2)
+Escreva uma função que receba como parâmetro dois
+números inteiros e retorne -1 se
+o primeiro for menor que o segundo número, 0 se forem
+iguais ou 1 se o primeiro for maior
+que o segundo número, escrever o resultado.*/
+    int a,b,ret;
+
+    printf("\nInsira Numeros:");
+    scanf("%d",&a);
+    scanf("%d",&b);
+    ret = fun_maiormenor(a,b);
+    printf("A:%d | %d:B | retorno:%d",a,b,ret);
+    return 0;
+}
+    int fun_maiormenor (int num1,int num2)
+    {
+        if (num1 > num2)
+            return(1);
+        else
+            if (num1==num2)
+            return(0);
+        else
+            return(-1);
+    }
