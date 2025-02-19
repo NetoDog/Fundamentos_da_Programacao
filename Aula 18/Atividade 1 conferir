@@ -16,6 +16,7 @@ Imprima o valor apontado por ptr.*/
     px = &x;
     printf("\n%d",*px);
     printf("\n%p",&x);
-    printf("\n%p",*px);
+    printf("\n%p",&px);
+    printf("\n%p",px);
     return (0);
 }
