@@ -9,19 +9,21 @@ escreva um programa em linguagem C para definir e ler duas variaveis do tipo int
 desenvolver e invocar um procedimento para efetuar a troca dos valores, no procedimento
 principal escrever o conteudo das variaveis;*/
 
-    int proc_troca(int a,int b)
+    void proc_troca(int *pa,int *pb)
     {
         int aux;
-        aux = a;
-        a = b;
-        b = aux;
-        printf("a;%d b:%d",a,b);
+        aux = *pa;
+        *pa = *pb;
+        *pb = aux;
+        printf("\na:%d | b:%d",*pa,*pb);
     }
 
     int a,b;
     printf("Insira a e b:");
     scanf("%d",&a);
     scanf("%d",&b);
-    proc_troca(a,b);
+    printf("a:%d|b:%d",a,b);
+    proc_troca(&a,&b);
+
     return (0);
 }
