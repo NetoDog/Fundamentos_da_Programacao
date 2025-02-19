@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+main (){
+    /*1)
+Declare uma variável x com valor 10.
+Declare um ponteiro ptr do tipo um inteiro.
+Atribua o endereço de x ao ponteiro ptr.
+Imprima o valor de x utilizando o ponteiro ptr.
+Imprima o endereço de x.
+Imprima o valor apontado por ptr.*/
+    int x,*px;
+    x=10;
+    px = &x;
+    printf("\n%d",*px);
+    printf("\n%p",&x);
+    printf("\n%p",*px);
+    return (0);
+}
