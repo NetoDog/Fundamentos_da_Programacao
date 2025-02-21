@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+main (){
+  /*3)
+escreva um programa em linguagem C para definir e ler duas variaveis do tipo char[30],
+desenvolver e invocar um procedimento para efetuar a troca dos valores, no procedimento
+principal escrever o conteudo das variaveis;*/
+    char a[30],b[30];
+    printf("Insira conteudo de A e B:");
+    gets(a);
+    setbuf(stdin,NULL);
+
+    gets(b);
+    setbuf(stdin,NULL);
+
+    troca(a,b);
+    printf("%s",a);
+    printf("\n%s",b);
+    return (0);
+}
+
+    troca (char a[],char b[])
+    {
+        char aux[30];
+
+     strcpy(aux,a);
+     strcpy(a,b);
+     strcpy(b,aux);
+
+
+    }
