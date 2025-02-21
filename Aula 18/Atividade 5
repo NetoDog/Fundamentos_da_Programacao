@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+
+int main (){
+  /*5)
+Escreva um progama em linguagem C, para ler um vetor com 10 elementos do tipo inteiro, e
+através de uma função void, com passagem de parametro do vetor, calcular e retornar através
+de parametro por referencia o maior e menor elemento do vetor.
+escrever o maior e menor elemento do vetor.*/
+ int a[10],maiorq,menorq;
+
+ for (int i=0;i<10;i++)
+ {
+     printf("Insira numero posicao:%d:",i);
+     scanf("%d",&a[i]);
+ }
+  maiorq = a[0]; menorq = a[0];
+  troca(a,&maiorq,&menorq);
+  printf(">:%d  <:%d",maiorq,menorq);
+return(0);
+}
+    void troca(int pa[],int *pmaior,int *pmenor)
+    {
+        for (int j=1;j<10;j++)
+        {
+         if (pa[j]>*pmaior)
+          *pmaior = pa[j];
+         if (pa[j]<*pmenor)
+          *pmenor = pa[j];
+        }
+    }
