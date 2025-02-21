@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+
+int main (){
+  /*4)
+Declare um array de inteiros arr com os valores {1, 2, 3, 4, 5}.
+Declare um ponteiro ptr do tipo um inteiro.
+Atribua o endereço do primeiro elemento do array arr ao ponteiro ptr.
+Use ptr para imprimir os elementos do array.
+Modifique o valor do terceiro elemento usando ptr, valor 300;
+Imprima novamente os elementos do array para verificar a modificação.*/
+    int a[5];
+    for(int j = 0;j<5;j++)
+    {
+        a[j] = j+1;
+    printf("%d  ",a[j]);
+    }
+    escreva(a);
+
+    return (0);
+}
+    void escreva(int pa[])
+    {
+     int *ptr,i;
+     ptr = pa;
+     for(i=0;i<5;i++)
+     {
+      printf("\n\n%p     %d",ptr,ptr[i]);
+    }
+    ptr[2] = 300;
+    for (i=0;i<5;i++)
+    {
+        printf("\n\n%p   %d",ptr,ptr[i]);
+    }
+    }
